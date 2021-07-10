@@ -1,0 +1,249 @@
+:root {
+  /* Color */
+  --black-color: #262626;
+  --white-color: #ffffff;
+  --blue-color: #00376b;
+  --skyblue-color: #0095f6;
+  --dark-gray-color: #aeb0b3;
+  --light-gray-color: #fafafa;
+
+  /* Size */
+  --avatar-size: 30px;
+
+  /* Font size */
+  --medium-size-font: 15px;
+  --small-size-font: 13px;
+  --micro-size-font: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: solid 0.5px var(--dark-gray-color);
+}
+
+/* 로고 in navbar */
+.navbar a {
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  color: var(--black-color);
+}
+
+/* 검색창 in navbar */
+.navbar .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 28px;
+  background-color: var(--light-gray-color);
+  border: solid 0.5px var(--dark-gray-color);
+  border-radius: 3px;
+}
+
+.navbar .search .fa-search {
+  font-size: 10px;
+  color: var(--dark-gray-color);
+}
+.navbar .search .fa-times-circle {
+  display: none;
+}
+
+.navbar .search input {
+  border: none;
+  background: none;
+  outline: none;
+  /* CHECK !! 이 부분에서 다른 방법이 없는지 */
+  width: 30px;
+}
+
+/* 메뉴 in navbar */
+.navbar .menu {
+  display: flex;
+}
+
+.navbar .menu li {
+  margin-left: 15px;
+}
+
+.navbar .menu li i {
+  font-size: 25px;
+  color: var(--black-color);
+}
+
+.navbar .menu li i.fa-user-circle {
+  font-size: 25px;
+  color: var(--dark-gray-color);
+}
+
+/* container */
+.container {
+  display: flex;
+  background-color: var(--light-gray-color);
+}
+
+/* contents */
+.container .contents {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 컨텐츠 in contents */
+.container .contents .contents-item {
+  width: 614px;
+  margin-top: 30px;
+  border: solid 0.5px var(--dark-gray-color);
+  border-radius: 3px;
+  background-color: var(--white-color);
+}
+
+/* 사용자 정보 in contents */
+
+/* (아바타 이미지) */
+.container .contents .contents-item .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 614px;
+  height: 60px;
+  padding: 10px;
+}
+
+.container .contents .contents-item .user img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border: solid 0.5px var(--dark-gray-color);
+  border-radius: 30px;
+}
+
+/* (닉네임) */
+.container .contents .contents-item .user .info {
+  width: 100%;
+  padding-left: 10px;
+  font-size: var(--small-size-font);
+}
+
+.container .contents .contents-item .user .info .nickname {
+  font-weight: bold;
+}
+
+/* 사진 in contents */
+.container .contents .contents-item .photos {
+  display: flex;
+  width: 100%;
+  height: 614px;
+}
+
+.container .contents .contents-item .photos img {
+  /* CHECK !! 이 부분에서 다른 방법이 없는지 */
+  width: 100%;
+  height: 100%;
+}
+
+/* 컨텐츠 옵션 in contents */
+.container .contents .contents-item .options {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 0;
+}
+
+/* (반응 버튼) */
+.container .contents .contents-item .options .react {
+  display: flex;
+}
+
+.container .contents .contents-item .options .react li {
+  margin-right: 10px;
+}
+
+.container .contents .contents-item .options .react li i {
+  font-size: 25px;
+  color: var(--black-color);
+}
+
+/* (사진 순서 위치) */
+.container .contents .contents-item .options .orderBtn {
+  display: flex;
+}
+
+.container .contents .contents-item .options .orderBtn li {
+  margin-right: 3px;
+  font-size: 5px;
+  color: var(--dark-gray-color);
+}
+
+.container .contents .contents-item .options .orderBtn li:nth-child(1) {
+  color: var(--skyblue-color);
+}
+
+/* (스크랩) */
+.container .contents .contents-item .options .bookmark {
+  font-size: 25px;
+}
+
+/* 컨텐츠 정보 in contents */
+.container .contents .contents-item .info {
+  padding: 0 15px 10px;
+  font-size: var(--medium-size-font);
+}
+
+.container .contents .contents-item .info .likes {
+  font-weight: bold;
+}
+
+/* (메타데이터) */
+.container .contents .contents-item .info .metadata a {
+  color: var(--black-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.container .contents .contents-item .info .metadata .item {
+  display: flex;
+}
+
+/* (해시태그) */
+.container .contents .contents-item .info .metadata .hashtags .tags {
+  display: flex;
+}
+
+.container .contents .contents-item .info .metadata .hashtags .tags li {
+  margin-right: 5px;
+  color: var(--blue-color);
+}
+
+/* (인스타 태그) */
+.container .contents .contents-item .info .metadata .tags .tag {
+  color: var(--blue-color);
+}
+
+.container .contents .contents-item .info .metadata .date {
+  padding-top: 10px;
+  font-size: var(--micro-size-font);
+  color: var(--dark-gray-color);
+}
