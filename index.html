@@ -12,23 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#">Instagram</a>
-
-        <div class="search">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="검색">
-            <i class="fas fa-times-circle"></i>
-        </div>
-
-        <ul class="menu">
-            <li><button><i class="fas fa-home"></i></button></li>
-            <li><button><i class="far fa-paper-plane"></i></button></li>
-            <li><button><i class="far fa-compass"></i></button></li>
-            <li><button><i class="far fa-heart"></i></button></li>
-            <li><button><i class="fas fa-user-circle"></i></button></li>
-        </ul>
-    </nav>
+    <div class="header">
+        <nav class="navbar">
+            <a href="#">Instagram</a>
+    
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="검색">
+                <i class="fas fa-times-circle"></i>
+            </div>
+    
+            <ul class="menu">
+                <li><button><i class="fas fa-home"></i></button></li>
+                <li><button><i class="far fa-paper-plane"></i></button></li>
+                <li><button><i class="far fa-compass"></i></button></li>
+                <li><button><i class="far fa-heart"></i></button></li>
+                <li><button><i class="fas fa-user-circle"></i></button></li>
+            </ul>
+        </nav>
+    </div>
 
     <div class="container">
         <ul class="contents">
@@ -110,6 +112,12 @@
 
                     <button class="moreBtn"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
+
+                <!-- 이미지 슬라이더 버튼 in contents -->
+                <ul class="sideBtn">
+                    <li><button><i class="fas fa-chevron-circle-left"></i></button></li>
+                    <li><button><i class="fas fa-chevron-circle-right"></i></button></li>
+                </ul>
 
                 <!-- 사진 in contents -->
                 <ul class="photos">
@@ -240,60 +248,54 @@
         </ul>
 
         <div class="social">
+            <!-- 사용자 프로필 in social -->
             <div class="profile">
-                <a href="#"><i class="fas fa-user"></i></a>
-
                 <div class="info">
-                    <p class="nickname">bom.e</p>
-                    <p class="name">bomi</p>
+                    <a href="#"><i class="fas fa-user-circle"></i></a>
+                    <p class="nickname">bom.e<br><span>bomi</span></p>
                 </div>
 
                 <p class="trans-account">전환</p>
             </div>
 
+            <!-- 추천 사용자 in social -->
             <div class="recommend">
+                <!-- 제목 in recommend -->
                 <div class="header">
                     <p class="title">회원님을 위한 추천</p>
                     <p class="moreInfo">모두 보기</p>
                 </div>
 
+                <!-- 인기 사용자 in recommend -->
                 <ul class="others">
                     <li class="item">
-                        <a href="#"><img src="images/user1.jpg" alt=""></a>
-            
                         <div class="info">
-                            <p class="nickname">alian</p>
-                            <p class="name">Instagram 추천</p>
+                            <a href="#"><img src="images/user1.jpg" alt=""></a>
+                            <p class="nickname">alian<br><span>Instagram 추천</span></p>
                         </div>
     
                         <p class="trans-account">팔로우</p>
                     </li>
-                    <li>
-                        <a href="#"><img src="images/user2.jpg" alt=""></a>
-            
+                    <li class="item">
                         <div class="info">
-                            <p class="nickname">teddysfoods</p>
-                            <p class="name">Instagram 추천</p>
+                            <a href="#"><img src="images/user2.jpg" alt=""></a>
+                            <p class="nickname">teddysfoods<br><span>Instagram 추천</span></p>
                         </div>
     
                         <p class="trans-account">팔로우</p>
                     </li>
-                    <li>
-                        <a href="#"><img src="images/user3.jpg" alt=""></a>
-            
+                    <li class="item">
                         <div class="info">
-                            <p class="nickname">victoria</p>
-                            <p class="name">Instagram 추천</p>
+                            <a href="#"><img src="images/user3.jpg" alt=""></a>
+                            <p class="nickname">victoria<br><span>Instagram 추천</span></p>
                         </div>
-    
+
                         <p class="trans-account">팔로우</p>
                     </li>
-                    <li>
-                        <a href="#"><img src="images/user4.jpg" alt=""></a>
-            
+                    <li class="item">
                         <div class="info">
-                            <p class="nickname">king_dogs</p>
-                            <p class="name">Instagram 추천</p>
+                            <a href="#"><img src="images/user4.jpg" alt=""></a>
+                            <p class="nickname">king_dogs<br><span>Instagram 추천</span></p>
                         </div>
     
                         <p class="trans-account">팔로우</p>
@@ -301,9 +303,12 @@
                 </ul>
             </div>
 
-            <p>소개 · 도움말 · 홍보 센터 · API · 채용 정보 ·<br>개인정보처리방침 · 약관 · 위치 · 인기 계정 · 해시태그 · 언어</p>
-        
-            <p>Ⓒ 2021 INSTAGRAM FROM FACEBOOK</p>
+            <!-- 옵션 in social -->
+            <div class="options">
+                <p>소개 · 도움말 · 홍보 센터 · API · 채용 정보 ·<br>개인정보처리방침 · 약관 · 위치 · 인기 계정 · 해시태그 · 언어</p>
+                <p>Ⓒ 2021 INSTAGRAM FROM FACEBOOK</p>
+            </div>
+    
         </div>
     </div>
 </body>

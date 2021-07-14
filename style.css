@@ -8,9 +8,10 @@
   --light-gray-color: #fafafa;
 
   /* Size */
-  --avatar-size: 30px;
+  --avatar-size: 40px;
 
   /* Font size */
+  --large-size-font: 17px;
   --medium-size-font: 15px;
   --small-size-font: 13px;
   --micro-size-font: 10px;
@@ -37,14 +38,24 @@ button {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  background-color: var(--light-gray-color);
+}
+
+body > .header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--white-color);
+  border-bottom: solid 0.5px var(--dark-gray-color);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 975px;
+  margin: auto;
   padding: 10px 20px;
-  border-bottom: solid 0.5px var(--dark-gray-color);
 }
 
 /* 로고 in navbar */
@@ -104,7 +115,9 @@ body {
 /* container */
 .container {
   display: flex;
-  background-color: var(--light-gray-color);
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
 }
 
 /* contents */
@@ -116,10 +129,11 @@ body {
 /* 컨텐츠 in contents */
 .container .contents .contents-item {
   width: 614px;
-  margin-top: 30px;
+  margin-bottom: 30px;
   border: solid 0.5px var(--dark-gray-color);
   border-radius: 3px;
   background-color: var(--white-color);
+  overflow: hidden;
 }
 
 /* 사용자 정보 in contents */
@@ -155,14 +169,29 @@ body {
 /* 사진 in contents */
 .container .contents .contents-item .photos {
   display: flex;
-  width: 100%;
-  height: 614px;
+  /* transform: translate(-614px); */
 }
 
 .container .contents .contents-item .photos img {
   /* CHECK !! 이 부분에서 다른 방법이 없는지 */
-  width: 100%;
-  height: 100%;
+  width: 614px;
+  height: 614px;
+}
+
+/* 이미지 슬라이더 버튼 in contents */
+.container .contents .contents-item .sideBtn {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 614px;
+  height: 614px;
+  padding: 10px;
+}
+
+.container .contents .contents-item .sideBtn i {
+  font-size: 20px;
+  color: var(--white-color);
 }
 
 /* 컨텐츠 옵션 in contents */
@@ -246,4 +275,158 @@ body {
   padding-top: 10px;
   font-size: var(--micro-size-font);
   color: var(--dark-gray-color);
+}
+
+/* social */
+.container .social {
+  margin-left: 30px;
+  width: 293px;
+}
+
+/* 사용자 프로필 in social */
+.container .social .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .social .profile .info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.container .social .profile .info a {
+  font-size: 60px;
+  color: var(--dark-gray-color);
+}
+
+.container .social .profile .info p {
+  margin-left: 15px;
+  font-size: var(--medium-size-font);
+  font-weight: bold;
+  line-height: 150%;
+}
+
+.container .social .profile .info p span {
+  font-weight: normal;
+  color: var(--dark-gray-color);
+}
+
+.container .social .profile .trans-account {
+  font-size: var(--medium-size-font);
+  font-weight: bold;
+  color: var(--skyblue-color);
+}
+
+/* 추천 사용자 in social */
+.container .social .recommend {
+  margin: 15px 0;
+}
+
+/* ( 제목 ) */
+.container .social .recommend .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--large-size-font);
+  font-weight: bold;
+  color: var(--dark-gray-color);
+}
+
+.container .social .recommend .header .moreInfo {
+  font-size: var(--small-size-font);
+  color: var(--blue-color);
+  letter-spacing: 1px;
+}
+
+/* ( 인기 사용자 ) */
+.container .social .recommend .others {
+  margin: 20px 0;
+}
+
+.container .social .recommend .others .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.container .social .recommend .others .item .info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.container .social .recommend .others .item .info a img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border: solid 0.5px var(--dark-gray-color);
+  border-radius: 30px;
+}
+
+.container .social .recommend .others .item .info p {
+  margin-left: 10px;
+  font-size: var(--medium-size-font);
+  font-weight: bold;
+  line-height: 120%;
+}
+
+.container .social .recommend .others .item .info p span {
+  font-size: var(--small-size-font);
+  font-weight: normal;
+  color: var(--dark-gray-color);
+}
+
+.container .social .recommend .others .item .trans-account {
+  font-size: var(--medium-size-font);
+  font-weight: bold;
+  color: var(--skyblue-color);
+}
+
+/* 옵션 in social */
+.container .social .options {
+  font-size: calc(var(--micro-size-font) + 1px);
+  color: var(--dark-gray-color);
+}
+
+.container .social .options p:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .social {
+    margin: 0;
+    width: 614px;
+  }
+
+  .container .social .profile {
+    display: none;
+  }
+
+  .container .social .recommend {
+    padding: 10px 20px;
+    border: solid 0.5px var(--dark-gray-color);
+    border-radius: 3px;
+    background-color: var(--white-color);
+  }
+
+  .container .social .recommend .header .moreInfo {
+    font-size: var(--large-size-font);
+    color: var(--skyblue-color);
+    letter-spacing: normal;
+  }
+
+  .container .social .recommend .others {
+    flex-direction: row;
+  }
+
+  .container .social .recommend .others .item {
+    width: 200px;
+  }
 }
