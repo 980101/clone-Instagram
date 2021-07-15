@@ -53,7 +53,7 @@ body > .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 975px;
+  max-width: 975px;
   margin: auto;
   padding: 10px 20px;
 }
@@ -281,6 +281,7 @@ body > .header {
 .container .social {
   margin-left: 30px;
   width: 293px;
+  height: 100vh;
 }
 
 /* 사용자 프로필 in social */
@@ -394,39 +395,86 @@ body > .header {
   margin-bottom: 15px;
 }
 
+.container .social .options .next {
+  content: "\a";
+  white-space: pre;
+}
+
 @media screen and (max-width: 1000px) {
+  /* container */
   .container {
     flex-direction: column;
     align-items: center;
   }
 
+  /* social */
   .container .social {
     margin: 0;
     width: 614px;
   }
 
+  /* 사용자 프로필 in social */
   .container .social .profile {
     display: none;
   }
 
+  /* 추천 사용자 in social */
   .container .social .recommend {
-    padding: 10px 20px;
+    padding: 20px 0 20px 20px;
     border: solid 0.5px var(--dark-gray-color);
     border-radius: 3px;
     background-color: var(--white-color);
   }
 
+  /* ( 제목 ) */
   .container .social .recommend .header .moreInfo {
+    margin-right: 20px;
     font-size: var(--large-size-font);
     color: var(--skyblue-color);
     letter-spacing: normal;
   }
 
+  /* ( 인기 사용자 ) */
   .container .social .recommend .others {
-    flex-direction: row;
+    display: flex;
+    margin: 10px 0 0 0;
+    overflow: hidden;
   }
 
   .container .social .recommend .others .item {
-    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 15px 0 0;
+    padding: 20px;
+    border: solid 1px var(--dark-gray-color);
+    border-radius: 3px;
+  }
+
+  .container .social .recommend .others .item:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .container .social .recommend .others .item .info {
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .container .social .recommend .others .item .info p {
+    margin: 15px 0;
+  }
+
+  .container .social .recommend .others .item .trans-account {
+    width: 130px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: var(--skyblue-color);
+    color: var(--white-color);
+    text-align: center;
+  }
+
+  /* 옵션 in social */
+  .container .social .options {
+    text-align: center;
   }
 }
