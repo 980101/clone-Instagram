@@ -169,6 +169,8 @@ body > .header {
 /* 사진 in contents */
 .container .contents .contents-item .photos {
   display: flex;
+  width: 1228px;
+  height: 614px;
   /* transform: translate(-614px); */
 }
 
@@ -178,20 +180,33 @@ body > .header {
   height: 614px;
 }
 
-/* 이미지 슬라이더 버튼 in contents */
-.container .contents .contents-item .sideBtn {
+/* 이미지 슬라이더 in contents */
+.container .contents .contents-item .slider {
+  position: relative;
+  display: flex;
+  width: 614px;
+  height: 614px;
+}
+
+/* (이미지 슬라이더 버튼) */
+.container .contents .contents-item .slider .sideBtn {
   position: absolute;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 614px;
   height: 614px;
-  padding: 10px;
+  padding: 0 30px;
 }
 
-.container .contents .contents-item .sideBtn i {
-  font-size: 20px;
-  color: var(--white-color);
+.container .contents .contents-item .slider .sideBtn i {
+  font-size: var(--large-size-font);
+  color: var(--dark-gray-color);
+}
+
+.container .contents .contents-item .slider .sideBtn .prevBtn {
+  display: none;
 }
 
 /* 컨텐츠 옵션 in contents */
@@ -226,7 +241,7 @@ body > .header {
   color: var(--dark-gray-color);
 }
 
-.container .contents .contents-item .options .orderBtn li:nth-child(1) {
+.container .contents .contents-item .options .orderBtn .active {
   color: var(--skyblue-color);
 }
 

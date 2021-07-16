@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clone Instagram</title>
     <script src="https://kit.fontawesome.com/2905322478.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,17 +114,20 @@
                     <button class="moreBtn"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
 
-                <!-- 이미지 슬라이더 버튼 in contents -->
-                <ul class="sideBtn">
-                    <li><button><i class="fas fa-chevron-circle-left"></i></button></li>
-                    <li><button><i class="fas fa-chevron-circle-right"></i></button></li>
-                </ul>
+                <!-- 이미지 슬라이더 in contents -->
+                <div class="slider">
+                    <!-- 이미지 슬라이더 버튼 in sliders -->
+                    <ul class="sideBtn">
+                        <li><button class="prevBtn"><i class="fas fa-chevron-circle-left"></i></button></li>
+                        <li><button class="nextBtn"><i class="fas fa-chevron-circle-right"></i></button></li>
+                    </ul>
 
-                <!-- 사진 in contents -->
-                <ul class="photos">
-                    <li><img src="images/img2-1.jpg" alt="bom"></li>
-                    <li><img src="images/img2-2.jpg" alt="bom"></li>
-                </ul>
+                    <!-- 사진 in slider -->
+                    <ul class="photos">
+                        <li><img src="images/img2-1.jpg" alt="bom"></li>
+                        <li><img src="images/img2-2.jpg" alt="bom"></li>
+                    </ul>
+                </div>
 
                 <!-- 컨텐츠 옵션 in contents -->
                 <div class="options">
@@ -135,8 +139,8 @@
 
                     <!-- 사진 순서 위치 in contents -->
                     <ul class="orderBtn">
-                        <li><i class="fas fa-circle"></i></li>
-                        <li><i class="fas fa-circle"></i></li>
+                        <li class="firstToken active"><i class="fas fa-circle"></i></li>
+                        <li class="secondToken"><i class="fas fa-circle"></i></li>
                     </ul>
 
                     <!-- 스크랩 in contents-->
