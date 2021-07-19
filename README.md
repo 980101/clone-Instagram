@@ -1,5 +1,5 @@
 # clone-Instagram
-Make clone Instagram site with HTML, CSS, vanilla JS
+Make clone Instagram site with HTML, CSS and vanilla JS
 
 ## Screen Shots 📷
 ◻ 기본 화면
