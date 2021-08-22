@@ -42,6 +42,7 @@ body {
 }
 
 body > .header {
+  z-index: 10;
   position: sticky;
   top: 0;
   width: 100%;
@@ -182,7 +183,7 @@ body > .header {
 
 /* 이미지 슬라이더 in contents */
 .container .contents .contents-item .slider {
-  position: relative;
+  /* position: relative; */
   display: flex;
   width: 614px;
   height: 614px;
@@ -208,6 +209,10 @@ body > .header {
 .container .contents .contents-item .slider .sideBtn .prevBtn {
   display: none;
 }
+
+/* .container .contents .contents-item .slider .photos {
+  display: flex;
+} */
 
 /* 컨텐츠 옵션 in contents */
 .container .contents .contents-item .options {
