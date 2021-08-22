@@ -172,7 +172,7 @@ body > .header {
   display: flex;
   width: 1228px;
   height: 614px;
-  /* transform: translate(-614px); */
+  transition: 0.5s;
 }
 
 .container .contents .contents-item .photos img {
@@ -209,10 +209,6 @@ body > .header {
 .container .contents .contents-item .slider .sideBtn .prevBtn {
   display: none;
 }
-
-/* .container .contents .contents-item .slider .photos {
-  display: flex;
-} */
 
 /* 컨텐츠 옵션 in contents */
 .container .contents .contents-item .options {
