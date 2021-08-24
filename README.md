@@ -13,4 +13,4 @@ Make clone Instagram site with HTML, CSS and vanilla JS
 ![slider-2](https://user-images.githubusercontent.com/47620950/125927932-30735779-afce-42a5-b6a7-38a8231bacb4.PNG)
 
 ## 수정해야할 부분 🛠
-- [ ] 스크롤 시, 슬라이더 부분이 navbar을 통과하는 오류
+- [x] 스크롤 시, 슬라이더 부분이 navbar을 통과하는 오류
