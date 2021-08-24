@@ -27,3 +27,20 @@ nextBtn.addEventListener('click', () => {
     prevBtn.style.display = 'block';
     nextBtn.style.display = 'none';
 });
+
+let search = document.querySelector('.search_input');
+let search_input = search.querySelector('.search_input>input');
+
+search_input.onfocus = inputFocus;
+search_input.onblur = inputBlur;
+
+function inputFocus() {
+    search.classList.toggle('active');
+}
+
+function inputBlur() {
+    // 입력 문자열이 있을 경우, 빈 문자열로 초기화
+    search_input.value = "";
+    
+    search.classList.toggle('active');
+}
