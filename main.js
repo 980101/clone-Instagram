@@ -30,12 +30,14 @@ nextBtn.addEventListener('click', () => {
 
 let search = document.querySelector('.search_input');
 let search_input = search.querySelector('.search_input>input');
+let search_record = document.querySelector('.search_record');
 
 search_input.onfocus = inputFocus;
 search_input.onblur = inputBlur;
 
 function inputFocus() {
     search.classList.toggle('active');
+    search_record.classList.toggle('active');
 }
 
 function inputBlur() {
@@ -43,4 +45,5 @@ function inputBlur() {
     search_input.value = "";
     
     search.classList.toggle('active');
+    search_record.classList.toggle('active');
 }

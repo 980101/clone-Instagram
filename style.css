@@ -123,26 +123,51 @@ body > .header {
 }
 
 /* (검색 기록) */
-/* .navbar .search .search_record .main {
-  position: absolute;
-  top: 45px;
-  width: 350px;
-  height: 350px;
-  padding: 20px;
-  background: aquamarine;
-  color: var(--black-color);
-  font-weight: 800;
+.navbar .search .search_record {
+  visibility: hidden;
+  margin-left: -60px;
+}
+
+.navbar .search .search_record.active {
+  visibility: visible;
 }
 
 .navbar .search .search_record .arrow {
+  z-index: 1;
   position: absolute;
-  top: 40px;
-  left: 160px;
-  width: 25px;
-  height: 25px;
-  background: aquamarine;
+  top: 35px;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  background: var(--white-color);
   transform: rotate(-45deg);
-} */
+  border-top: 1px solid var(--dark-gray-color);
+  border-right: 1px solid var(--dark-gray-color);
+}
+
+.navbar .search .search_record .main {
+  position: absolute;
+  top: 46px;
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  background: var(--white-color);
+  color: var(--black-color);
+  font-weight: 800;
+  border: 1px solid var(--dark-gray-color);
+}
+
+.navbar .search .search_record .main .main_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar .search .search_record .main .main_list li {
+  color: var(--dark-gray-color);
+}
 
 /* 메뉴 in navbar */
 .navbar .menu {
